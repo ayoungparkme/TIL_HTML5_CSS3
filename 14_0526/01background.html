@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_background(배경)속성 p.185</title>
+  <style>
+    .list01 > li:first-child{background-color:rgba(255, 0, 0, 0.8);}
+    .list01 > li:nth-child(2){background-color:rgba(255, 0, 0, 0.6);}
+    .list01 > li:nth-child(3){background-color:rgba(255, 0, 0, 0.4);}
+    .list01 > li:nth-child(4){background-color:rgba(255, 0, 0, 0.2);}
+    .list01 > li:last-child{background-color:rgba(255, 0, 0, 0.1);}
+
+    .box01, .box02{
+      width:200px;height:100px;
+      border:3px solid #000;
+    }
+    .box01{
+      background:linear-gradient(#f00,#ff0);
+    }
+    .box02{
+      background:radial-gradient(#f00,#ff0);
+    }
+    .box03{
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e6f0a3+0,d2e638+50,c3d825+51,dbf043+100;Green+Gloss+%232 */
+      background: #e6f0a3; /* Old browsers */
+      background: -moz-linear-gradient(top,  #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+    }
+
+
+  </style>
+
+  <!-- css3속성 사용시 접두사 자동으로 붙여주는 스크립트 소스 p.241 -->
+  <script src="./script/prefixfree.min.js"></script>
+
+</head>
+<body>
+  <h2>01_background(배경)속성 p.185</h2>
+  <p>background속성은 사용자가 선택한 요소에 배경색, 배경이미지를 삽입하기 위한 속성이다.</p>
+  <dl>
+    <dt>배경속성의 종류</dt>
+    <dd>1. background-color:배경색(단일색, 그라디언트)</dd>
+    <dd>2. background-image:배경이미지</dd>
+    <dd>3. background-repeat:배경이미지 반복설정하기</dd>
+    <dd>4. background-size:배경이미지 크기</dd>
+    <dd>5. background-position:배경이미지 위치 변경</dd>
+    <dd>6. background-origin:배경이미지 기준위치 지정</dd>
+    <dd>7. background-attatchment : 배경이미지 고정하기</dd>
+    <dd>8. 멀티백그라운드 : css3에서 추가된 속성으로서 여러 이미지를 한꺼번에 삽입가능.</dd>
+  </dl>
+
+<h3>1. 배경색(background-color)</h3>
+<p>배경색 넣기위한 색상값의 종류로는 '색상명', hex코드(#000000), rgb, rgba, hsl, hsla종류가 있다.</p>
+<p>a는 alpha(투명도)의 약자로서 %를 소수점으로 환산하여 입력한다.</p>
+<ul class="list01">
+  <li>배경색 투명도 80%</li>
+  <li>배경색 투명도 60%</li>
+  <li>배경색 투명도 40%</li>
+  <li>배경색 투명도 20%</li>
+  <li>배경색 투명도 10%</li>
+</ul>
+<p>* opacity, alpha의 차이점은 opacity 글자와 배경 모두 적용되지만, alpha는 배경만 적용되는 속성값이다.</p>
+
+<h3>2. 그라디언트(gradient) p.237</h3>
+<p>그라디언트란? 2가지 이상의 색상이 점진적으로 변하는 색상을 말하며 웹에서도 그라데이션 색상을 표현 할 수 있다. 그라데이션은 선형(linear)과 원형(radial) 2가지 종류가 있다.</p>
+<div class="box01">선형 그라디언트</div>
+<div class="box02">원형 그라디언트</div>
+
+<p>colorzilla.com사이트를 활용하여 그라디언트 삽입하기</p>
+<div class="box03">그라디언트 삽입하기</div>
+
+
+</body>
+</html>

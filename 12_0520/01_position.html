@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_position(요소의 배치방법)</title>
+  <style>
+    .box01, .box02, .box03{
+      width:100px;height:100px;
+    }
+    .wrap{
+      width:1000px;height:500px;
+      border:5px solid #000;
+      background:#ff0;
+      position:relative;
+      top:50px;left:300px;
+    }
+    .box01{background:#f00;position:absolute;left:50px;top:100px;}
+    .box02{
+      background:#0f0;position:absolute;
+      right:100px;top:200px;
+      z-index:3;
+    }
+    .box03{background:#00f;position:absolute;bottom:100px;left:200px;}
+  </style>
+</head>
+<body>
+  <h2>02_position(요소의 배치방법)</h2>
+  <p>포지션(position) 속성이란? 레이아웃 작업시 사용자가 부모요소 박스안에서 원하는 콘텐츠를 선택하여 배치하기 위한 속성</p>
+  <p>static(요소가 가지고 있는 기본 위치값), absolute(절대배치), relative(상대배치), fixed(고정배치), inherit(상속)의 종류가 있다.</p>
+  <p>포지션 속성을 사용하여 배치시 위치값은 top, left, right, bottom속성을 사용한다.</p>
+  <p>포지션 속성을 사용하면 float속성처럼 콘텐츠와 콘텐츠끼리 겹침현상이 나타나는데, 위, 아래 순서를 변경하고자 할 때는 z-index속성을 사용한다.</p>
+  <p>z-index속성은 먼저 작성된 태그가 z-index값이 0이며, 나중에 작성된 태그 순서대로 번호가 자동으로 매겨진다. z-index속성을 사용하여 위/아래 순서도 변경이 가능하다.</p>
+
+  <h3>1. 절대배치(absolute)</h3>
+  <p>absolute속성은 사용자가 선택한 요소를 브라우저의 왼쪽 상단을 기준으로 배치하고자 할 때 사용하며, 만약 감싸는 부모요소가 있을 경우 부모요소의 왼쪽 상단이 기준이 된다. (부모요소가 relative속성일 때)</p>
+
+  <h3>2. 상대배치(relative)</h3>
+  <p>절대배치와는 다르게 현재요소가 있는 위치가 기준이 되면서 위치를 지정하고자 할 때 사용한다.</p>
+
+  <h3>3. 고정배치(fixed)</h3>
+
+  <article class="wrap">
+    <div class="box01">빨강</div>
+    <div class="box02">초록</div>
+    <div class="box03">파랑</div>
+  </article>
+
+  <aside>
+    브라우저의 오른쪽 하단에 고정배치하기
+    <a href="#" title="위로 바로가기">Top</a>
+  </aside>
+
+
+  <style>
+    aside{
+      width:150px;height:300px;
+      border:3px solid #000;
+      background:#ccc;
+      text-align:center;
+      position:fixed;
+      right:50px;bottom:150px;
+      box-shadow:0px 0px 10px #333; /* x좌표, y좌표, 번지는 정도, 색상 */
+    }
+    aside > a{
+      background:#000;
+      color:#fff;
+      text-decoration:none;
+      padding:5px 30px;
+      border-radius:20px; /* 모서리 둥글게 */
+      text-transform:uppercase;/* 영문소문자를 대문자로 전환 */
+      transition:0.5s;
+    }
+    aside > a:hover{
+      color:#000;
+      background:#fff;
+      border:1px solid #000;
+    }
+  </style>
+</body>
+</html>

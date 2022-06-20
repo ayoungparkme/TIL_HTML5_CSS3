@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14_html5에서 추가된 폼태그와 속성들 p.82</title>
+  <style>
+    .t_label{display:none;}
+    input{text-align:center;}
+  </style>
+</head>
+<body>
+  <form name="양식" method="post" action="a.php">
+  <h2>14_html5에서 추가된 폼태그와 속성들 p.82</h2>
+  <p>HTML5에서 추가된 폼태그와 속성들은 현재 사용하고 있는 브라우저(크롬, MS EDGE, 파이어폭스, 오페라, 사파리, 웨일, 스윙.....)에서 버전별 지원을 하기 때문에 지원상황을 확인하고 사용해야 한다. http://caniuse.com(브라우저 버전별 태그 지원 유무 확인 사이트)</p>
+
+  <p>1. 폼양식을 그룹지정하기 위한 요소 - fieldset, legend</p>
+  <fieldset>
+    <legend>필수입력정보</legend>
+    <label for="id" class="t_label">아이디:</label>
+    <input type="text" id="id" maxlength="16" placeholder="아이디">
+    <br>
+    <label for="pw" class="t_label">패스워드:</label>
+    <input type="password" id="pw" maxlength="16" placeholder="패스워드">
+
+  </fieldset>
+  <fieldset>
+    <legend>선택입력정보</legend>
+    <label for="address">주소 :</label>
+    <input type="text" id="address" maxlength="30" placeholder="예)도로명 주소 000길 00">
+    <br>
+    <label for="mail">이메일 :</label>
+    <input type="text" id="mail" maxlength="30" placeholder="id@domain.com or co.kr">
+  </fieldset>
+
+  <p>placeholder : 사용자가 입력할 내용을 미리 알려주어 오류가 나지 않도록 방지해줌. 웹접근성 측면에서 도움이 많이 됨.</p>
+
+  <p>2. search : 사용자가 입력양식에 키워드를 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로서 단어를 입력하면 오른쪽 끝에 'X'표시가 뜨며 클릭시 내용이 삭제됨.</p>
+  <input type="search"><br>
+  <input type="serach" placeholder="5월 초특가 상품전">
+  <input type="button" value="검색">
+
+  <p>3. email : 이메일 주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 난다.</p>
+  <input type="email" placeholder="id@domain.com">
+  
+
+  <p>4. url : 사용자가 도메인 주소를 입력할 수 있도록 하는 양식이며, 주소형식이 맞지 않을 경우 에러메세지가 나온다.</p>
+  <input type="url" placeholder="http://domain.co.kr or com">
+  <input type="submit" value="보내기">
+
+  <p>5. number : 숫자를 입력하기 위한 요소로서 직접입력하거나 화살표 버튼을 사용하여 설정이 가능하다.</p>
+  <input type="number">
+
+  <p>6. date : 년, 월, 일을 선택하기 위한 요소로서 클릭시 달력창이 활성화됨.</p>
+  <input type="date">
+
+  <p>7. color :  사용자가 원하는 색상을 고르기 위한 양식</p>
+  <input type="color">
+
+</form>
+</body>
+</html>

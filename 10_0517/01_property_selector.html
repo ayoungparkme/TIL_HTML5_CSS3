@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css3선택자_01_property(속성)_selector(선택자) p.118</title>
+  <style>
+    /* 1. 기본속성선택자 */
+    label[for]{
+      font-weight:bold;
+      display:inline-block;
+      width:100px;
+    }
+    label[for='id_txt']{color:#00f;}
+    label[for='pw_txt']{color:#f00;}
+
+    input[type]{border:none;} /* input태그에 속성이 type인걸 찾아서 서식 적용 */
+    input[type='text']{background:#ff0;} /* input태그의 type이 text값 선택*/
+    input[type='password']{background:#0f0;} /* input태그의 type이 password값 선택 */
+
+    /* 이미지주소의 마지막 문자를 찾아서 각각 테두리 속성을 적용한다. */
+    img[src$='.jpg']{border:3px solid #0000ff;}
+    img[src$='bmp']{border:3px double #ff0000;}
+    img[src$='gif']{border:3px dashed #00ff00;}
+    img[src$='png']{border:3px dotted #ff0000;}
+
+    img{transition:0.5s;}
+    /* 이미지에 마우스 오버시 테두리 검정색 나오게하기 */
+    img:hover{
+      border:3px solid #000000;
+      /* filter: grayscale(1); */
+      filter:brightness(0.4);
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>css3선택자_01_property(속성)_selector(선택자) p.118</h2>
+  <p>속성선택자는 html태그요소에 있는 속성(href, src, alt, type, title......)을 선택하여 서식을 적용하고자 할 때 사용하는 선택자로서 기본속성, 문자열속성 선택자가 있다.</p>
+  <h3>1. 기본 속성선택자</h3>
+  <p>선택자[속성] : 선택자안에 '속성'이 일치하는 것을 선택한다.</p>
+  <p>선택자[속성=값] : 선택자안에 '속성=값'이 일치하는 것을 선택한다.</p>
+  <p>예)
+    <form name="폼이름" method="post" action="a.php">
+      <fieldset>
+        <legend>로그인 폼</legend>
+        <label for="id_txt">아이디</label>
+        <input type="text" maxlength="16" id="id_txt" placeholder='아이디'>
+        <br>
+        <label for="pw_txt">패스워드</label>
+        <input type="password" maxlength="16" id="pw_txt" placeholder="패스워드">
+        <br>
+        <input type="submit" value="로그인">
+      </fieldset>
+    </form>
+  </p>
+
+  <h3>2. 문자열 속성선택자</h3>
+  <p>속성값안에 있는 문자열에서 사용자가 찾고자 하는 문자를 선택하여 서식을 적용.</p>
+		<ul>
+			<li>선택자[속성|(파이프라인)=값] : 특정값이 포함된 속성을 선택</li>
+			<li>선택자[속성^(써컴플렉스)=값] : 시작하는 단어가 포함된 속성 선택</li>
+			<li>선택자[속성$(달러사인)=값] : 끝나는 단어가 포함된 속성선택</li>
+			<li>선택자[속성*(아스테리스크)=값] : 문자열 안에서 해당단어 포함된 속성을 선택</li>
+			<li>선택자[속성~(틸트)=값] : 여러 값들 중 특정 '값'이 포함되어 있을 때 선택</li>
+		</ul>
+
+    <h3>이미지 확장자별(jpg, gif, bmp, png)로 테두리 속성을 넣어서 변경하고, 마우스 오버하면 같은 테두리 색상이 나오게 하기</h3>
+    <img src="./images/photo01.jpg" alt="상품1">
+    <img src="./images/photo02.gif" alt="상품2">
+    <img src="./images/photo03.bmp" alt="상품3">
+    <img src="./images/photo04.png" alt="상품4">
+    
+</body>
+</html>

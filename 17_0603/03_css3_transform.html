@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_css3_transform(변형)</title>
+  <style>
+    div{width:100px;height:100px;background:#00f;}
+    #box01{transform:scale(1.5);} /* 원래크기의 1.5배 = 150*150 */
+    #box02{transform:rotate(45deg);} 
+    #box03{transform:skew(30deg);}
+    #box04{transform:translate(100px, 50px);}
+  </style>
+</head>
+<body>
+  <h2>03_css3_transform(변형) - 2차원, 3차원</h2>
+  <p>transform속성을 사용하여 사용자가 선택한 요소의 크기를 변경(scale)하거나, 기울기(skew), 회전(rotate), 위치 이동(translate)을 하기 위한 속성이다.</p>
+
+  <ul>
+    <li>scale - 크기를 조정하기 위한 속성으로서 %를 소수점으로 환산하여 입력한다.</li>
+    <li>rotate - 회원을 위한 속성이며 각도 입력시 단위 deg를 입력한다.</li>
+    <li>skew - 기울기를 위한 속성이며 각도 입력시 단위 deg를 입력한다.</li>
+    <li>translate - 위치를 이동하기 위한 속성이며 position:relative와 비슷한 속성</li>
+  </ul>
+
+  <h3>1. scale - 사용자가 선택한 요소의 크기를 설정함.</h3>
+  <div id="box01"></div>
+  <h3>2. rotate - 사용자가 선택한 요소를 회전함.</h3>
+  <div id="box02"></div>
+  <h3>3. skew - 사용자가 선택한 요소를 기울임.</h3>
+  <div id="box03"></div>
+  <h3>4. translate - 사용자가 선택한 요소의 위치를 이동함.(position과 비슷)</h3>
+  <div id="box04"></div>
+  
+    <h3>프리픽스프리 사이트의 오른쪽 상단 리본디자인 구현</h3>
+    <div class="libon">
+      <a href="#" title="">Fork me on Github</a>
+    </div>
+
+    <style>
+      .libon{
+        width:300px;height:34px;
+        background-color:#696969;
+        text-align:center;
+        padding-top:3px;
+        transform:rotate(45deg);
+        position:fixed;
+        right:-62px;top:67px;
+        box-shadow:0px 0px 3px #333;
+      }
+      .libon > a{
+        color:#fff;
+        font-size:12px;
+        text-decoration:none;
+        border-top:1px dashed #fff;
+        border-bottom:1px dashed #fff;
+        line-height:28px;
+        display:block;
+        text-shadow:0px 0px 3px #333;
+      }
+    </style>
+</body>
+</html>

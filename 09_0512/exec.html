@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습_선택자를 활용하여 쿠팡 여성패션 콘텐츠 디자인하기</title>
+  <style>
+    .product{
+      width:470px;height:549px;
+      border-top:3px solid #ff72be;
+      border-bottom:1px solid #cccccc;
+      position:relative; /* 현재 부모요소가 기준*/
+      font-size:12px;
+    }
+    .product > img{
+      position:absolute; /* 부모박스안에서 위치를 설정한다. */
+      right:0px;top:0px; /* 위치값으로 배치한다. */
+    }
+    .product > h3{
+      font-size:22px;
+      color:#ff72be;
+      margin-bottom:0px;
+    }
+    .product a{
+      color:#333333;
+      text-decoration:none;
+    }
+    .shutcut{
+      font-size:11px;
+      padding-left:4px;
+    }
+    .product > dl{
+      line-height:30px;
+      padding-top:240px;
+    }
+    .product > dl > dt{
+      text-transform: uppercase;
+      font-size:16px;
+      font-weight:bold;
+    }
+    .product > dl > dd{margin:0px;}
+    .product > dl > dd > a{
+      color:#ff72be;
+      border:1px solid #cccccc;
+      padding:2px 4px;
+      transition:0.5s;
+    }
+    .product > dl > dd > a:hover{
+      background:#ff72be;
+      color:#ffffff;
+      border:1px solid #ff72be;
+    }
+    .layout{width:460px;}
+  </style>
+</head>
+<body>
+  <h2>실습_선택자를 활용하여 쿠팡 여성패션 콘텐츠 디자인하기</h2>
+
+  <div class="product">
+    <h3>여성패션</h3>
+    <a href="#" title="바로가기" class="shutcut">바로가기 &#x003E;</a>
+    <dl>
+      <dt>hot키워드</dt>
+      <dd><a href="#" title="카디건">#카디건</a></dd><!-- alt + shift + 방향키 -->
+      <dd><a href="#" title="원피스">#원피스</a></dd>
+      <dd><a href="#" title="청바지">#청바지</a></dd>
+      <dd><a href="#" title="크로스백">#크로스백</a></dd>
+      <dd><a href="#" title="운동화">#운동화</a></dd>
+      <dd><a href="#" title="잠옷">#잠옷</a></dd>
+    </dl>
+    <img src="./images/product.jpg" alt="여성의류">
+  </div>
+
+  <br><br>
+  <h3>여성패션 레이아웃 구조</h3>
+  <img src="images/layout.jpg" alt="레이아웃" class='layout'>
+</body>
+</html>

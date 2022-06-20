@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html태그 학습 - 10.이미지 맵(map)</title>
+  </head>
+  <body>
+    <h2>10.이미지 맵(map)</h2>
+    <p>이미지맵이란? 하나의 이미지에 여러개의 맵(사각형, 원형, 다각형)을 만들어서 링크를 걸 수 있는 기능.</p>
+    <p>작성법) map name="맵이름", area shape="rect, circle, polyon" coords="좌표값"</p>
+
+    <img src="./img/main_item1.jpg" alt="상품목록" usemap="#product">
+
+    <map name="product">
+      <area shape="rect" coords="14,19,160,180" href="http://www.gmarket.co.kr" alt="지마켓 바로가기">
+      <area shape="rect" coords="186,12,308,195" href="http://www.coupang.com" alt="쿠팡">
+      <area shape="rect" coords="341,8,488,203" href="http://www.tmon.co.kr" alt="티몬">
+      <area shape="rect" coords="492,15,641,207" href="http://www.auction.co.kr" alt="옥션">
+    </map>
+
+  </body>
+</html>

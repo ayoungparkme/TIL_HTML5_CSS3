@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>지마켓 상단 내비게이션 구현(스프라이트 이미지)_전체카테고리</title>
+  <style>
+    *{
+      margin:0px;padding:0px;
+    }
+    ul, li, ol{
+      list-style:none; /* 목록앞에 기호 숨기기 */
+    }
+    a{
+      text-decoration:none;
+      color:#333333;
+    }
+    h2{padding:15px;}
+    
+    header{
+      position:relative; /*기준설정*/
+    }
+    
+    header > h1{
+      width:200px;height:48px;
+      background-image:url('./images/common.png');
+/*      text-indent:-9999px;  a요소를 모니터 밖으로 내보냄 */
+    }
+    header > h1 > a{
+/*      display:none;  글자가 없어지면서 링크도 안됨. */
+/*      display:block;*/
+      opacity:0; /*투명도   100% = 1,   0%=0 */
+    }
+    
+    header > label{
+      width:201px;height:50px;
+      display:block;
+      background-image:url('./images/common.png');
+      
+      background-position:-210px -240px;
+      text-indent:-9999px;
+      cursor:pointer; /* 마우스 포인터 손가락으로 */
+    }
+    
+    /* 전체카테고리(label)를 클릭하면 체크박스에 체크가 되면서 그 바로아래 동생 label의 배경이미지위치값을 설정하여 이미지 변경됨. */
+    
+    #toggle:checked + header label{
+        background-position:0px -240px;
+    } 
+    
+    /* 체크박스 숨기기 */
+    input[type=checkbox]{display:none;}
+    
+    .gnb{width:201px;}
+    
+    .gnb > ul{}
+    .gnb > ul > li{
+      height:44px;
+      background-color:#6495ed;
+    }
+    .gnb > ul > li > a{
+      background-image:url('./images/main.png');
+      display:block;
+      line-height:44px;
+      text-indent:-9999px;
+    }
+    /* 메뉴목록마다 배경이미지의 위치값(세로)을 변경하여 해당 이미지가 나오도록 함 */
+    .gnb > ul > li:first-child > a{background-position:0px 0px;}
+    .gnb > ul > li:nth-child(2) > a{background-position:0px -44px;}
+    .gnb > ul > li:nth-child(3) > a{background-position:0px -88px;}
+    .gnb > ul > li:nth-child(4) > a{background-position:0px -132px;}
+    .gnb > ul > li:nth-child(5) > a{background-position:0px -176px;}
+    .gnb > ul > li:nth-child(6) > a{background-position:0px -220px;}
+    .gnb > ul > li:nth-child(7) > a{background-position:0px -264px;}
+    .gnb > ul > li:nth-child(8) > a{background-position:0px -308px;}
+    .gnb > ul > li:last-child > a{background-position:0px -352px;}
+      
+    /* 카테고리에 마우스 오버시 배경색 변경 */
+    .gnb > ul > li > a:hover{background-color:#031b9b;}
+    
+    
+    /* 사이트맵 서식 */
+    .sitemap{
+      width:1300px;
+      height:400px;
+      background-color:rgba(0, 0, 0, 0.7);
+      position:absolute;top:98px;
+      display:none;
+      color:#fff;
+    }
+    /* 전체카테고리를 클릭하면 아래 동생들 중 sitemap이 나오도록 함. */
+    #toggle:checked + header .sitemap{display:block;}
+    
+    
+  </style>
+</head>
+<body>
+  <h2>지마켓 상단 내비게이션 구현(스프라이트 이미지)</h2>
+  <p>전체메뉴 클릭시 쇼핑몰 모든 카테고리 보이게하기</p>
+
+  <input type="checkbox" id="toggle">
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+        상단로고
+      </a>
+    </h1>
+    
+    
+	<label for="toggle">전체카테고리</label>
+    
+    <nav class="gnb">
+     <ul>
+       <li><a href="#" title="">브랜드패션</a></li>
+       <li><a href="#" title="">패션의류&middot;잡화&middot;뷰티</a></li>
+       <li><a href="#" title="">유아동</a></li>
+       <li><a href="#" title="">식품&middot;생필품</a></li>
+       <li><a href="#" title="">홈데코&middot;문구</a></li>
+       <li><a href="#" title="">컴퓨터&middot;디지털</a></li>
+       <li><a href="#" title="">스포츠&middot;건강</a></li>
+       <li><a href="#" title="">자동차&middot;공구</a></li>
+       <li><a href="#" title="">여행&middot;도서&middot;티켓&middot;쿠폰</a></li>
+     </ul>
+    </nav>   
+    
+    <nav class="sitemap">
+      전체 메뉴가 나오는 영역(dl, dt, dd)
+    </nav>
+      
+  </header>
+  
+</body>
+</html>

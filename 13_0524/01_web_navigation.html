@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_web_navigation(웹 내비게이션)</title>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <style>
+    h2, p, h3{
+      padding:10px;
+    }
+    a{
+      text-decoration:none;
+      color:#333;
+    }
+    .gnb01{
+      width:200px;
+      background:#333;   
+    }
+    .gnb01 > li{
+      line-height:30px;
+      text-align:center;
+    }
+    .gnb01 > li > a{
+      color:#fff;
+      display:block; /* 성격을 전환하여 영역을 넓혀줌 - 반응영역이 넓어짐. */
+      transition:0.5s;
+    }
+    .gnb01 > li > a:hover{
+      background:#ccc;
+      color:#333;
+    }
+
+    /* 가로방향 메뉴 */
+    .gnb02{
+      width:1000px;height:42px;
+      background:#0d4633;
+      display:flex; /* css3에서 추가된 속성 */
+      justify-content: space-around;
+    }
+    .gnb02 > li{ /*블럭요소를 가로방향으로 배치 */
+      line-height:42px;
+      /* float:left; */
+      /* display:inline; */
+      /* display:inline-block; */
+    }
+    .gnb02 > li > a{
+      color:#fff;display:block;
+    }
+    .gnb02 > li > a:hover{
+      color:orange;
+      text-decoration:underline;
+    }
+
+    /* 2단 내비게이션 */
+    #navi{
+      background:#0f0;
+      height:42px;
+      overflow:hidden; /* 해당하는 영역을 벗어난 콘텐츠 숨기기 */
+      transition:0.5s;
+    }
+    #navi:hover{ /* 사용자가 navi영역에 마우스 오버시 높이를 키워서 서브가 보이도록 한다. */
+      height:300px;
+    }
+    nav{
+      width:100%;height:42px;
+      background:#0d4633;
+    }
+    .gnb03{
+      width:1000px;height:42px;
+      margin:0px auto; /* 브라우저의 가운데 정렬 */
+      display:flex;
+      justify-content: space-around;
+    }
+    .gnb03 > li{
+      line-height:42px;
+    }
+    .gnb03 > li > a{
+      color:#fff;
+      display:block;
+    }
+    .gnb03 > li > a:hover{
+      color:orange;text-decoration:underline;
+    }
+
+    /* 서브메뉴 서식 */
+    .sub{}
+    .sub > li{text-align:center;}
+    .sub > li > a{}
+    .sub > li > a:hover{color:orange;}
+
+  </style>
+</head>
+<body>
+  <h2>CSS3_웹내비게이션(Navigation) p.267</h2>
+  <p>웹페이지에서 사용자가 정보를 찾기 위한 가장 기본적인 수단으로서 내비게이션(메뉴)라고 하며, 종류에는 메인메뉴, 서브메뉴, 검색메뉴, 로그인메뉴, 사이드 메뉴, 드롭다운메뉴, 탭메뉴, 사용자의 현재 위치를 알려주는 '로케이션'메뉴 등이 있다.</p>
+<p>내비게이션 개발은 메뉴 목록을 나열하기 위해 목록태그요소 ul, li태그를 사용하고, a태그요소로 하이퍼링크를 설정한다.</p>
+<p>gnb : global navigation bar의 약자로서 보통 메인메뉴를 작성할 때 사용하는 명칭</p>
+<p>lnb : local navigation bar의 약자로서 메인메뉴외에 서브메뉴나 콘텐츠 영역에서 사용되는 메뉴를 작성하고자 할 때 사용하는 명칭이다.</p>
+
+<h3>1. 세로방향의 내비게이션 메뉴</h3>
+<ul class="gnb01">
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+</ul>
+
+<h3>2. 가로방향의 내비게이션 메뉴</h3>
+<ul class="gnb02">
+  <li><a href="#" title="브랜드 스토리">브랜드 스토리</a></li>
+  <li><a href="#" title="새로워진 뚜레쥬르">새로워진 뚜레쥬르</a></li>
+  <li><a href="#" title="제품 안내">제품 안내</a></li>
+  <li><a href="#" title="이벤트">이벤트&#38;멤버십</a></li>
+  <li><a href="#" title="쇼핑몰">쇼핑몰&#38;케이크 배달신청</a></li>
+</ul>
+
+<h3>3. 메인, 서브메뉴가 있는 2단 내비게이션 메뉴</h3>
+<div id="navi"> <!-- 서브메뉴를 보이게하고 숨기게 하는 박스요소 -->
+  <nav>
+    <ul class="gnb03">
+      <li><a href="#" title="브랜드 스토리">브랜드 스토리</a>
+        <ul class="sub">
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+        </ul>
+      </li>
+      <li><a href="#" title="새로워진 뚜레쥬르">새로워진 뚜레쥬르</a>
+        <ul class="sub">
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+        </ul>
+      </li>
+      <li><a href="#" title="제품 안내">제품 안내</a>
+        <ul class="sub">
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+        </ul>
+      </li>
+      <li><a href="#" title="이벤트">이벤트&#38;멤버십</a>
+        <ul class="sub">
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+        </ul>
+      </li>
+      <li><a href="#" title="쇼핑몰">쇼핑몰&#38;케이크 배달신청</a>
+        <ul class="sub">
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+          <li><a href="#" title="서브메뉴">서브메뉴</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<h3>4. 푸터영역에 들어가는 회사소개, 이용약관 메뉴</h3>
+<ul>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+  <li><a href="#" title="메뉴">메뉴</a></li>
+</ul>
+
+</body>
+</html>

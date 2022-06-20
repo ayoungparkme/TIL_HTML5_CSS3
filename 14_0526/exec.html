@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_지마켓 pc화면 메인 내비게이션 구현</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    ol, ul, li{list-style:none;}
+    a{text-decoration:none;color:#333;}
+
+    h1{
+      width:180px;height:48px;
+      background-image:url('./images/common.png');
+      background-position:0px 0px;
+    }
+    h1 > a{
+      text-indent:-9999px;
+      display:block;
+      line-height:48px;
+    }
+    .total_mnu{
+      display:block;
+      width:200px;height:50px;
+      background-image:url('./images/common.png');
+      background-position:0px 0px;
+      text-indent:-9999px;
+    }
+    .gnb{width:200px;}
+    .gnb > li{
+      height:44px;
+			background-color:#2253ad;
+    }
+    .gnb > li:hover{
+      background-color:#0c2a63;
+    }
+    .gnb > li > a{
+      display:block;height:44px;
+      background-image:url('./images/main.png');
+      background-position:0px 0px;
+      text-indent:-9999px;
+    } 
+    .gnb > li:first-child > a{}
+    .gnb > li:nth-child(2) > a{background-position:0px -44px;}
+    .gnb > li:nth-child(3) > a{background-position:0px -88px;}
+    .gnb > li:nth-child(4) > a{background-position:0px -132px;}
+    .gnb > li:nth-child(5) > a{background-position:0px -132px;}
+    .gnb > li:nth-child(6) > a{background-position:0px -132px;}
+    .gnb > li:nth-child(7) > a{background-position:0px -132px;}
+    .gnb > li:nth-child(8) > a{background-position:0px -132px;}
+    .gnb > li:last-child > a{background-position:0px -132px;}
+  </style>
+</head>
+<body>
+  
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">지마켓 로고</a>
+    </h1>
+    <label for="total_mnu">전체메뉴</label>
+    <nav>
+      <ul class="gnb">
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+        <li><a href="#" title="메뉴">메뉴</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+
+</body>
+</html>

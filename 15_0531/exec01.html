@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모바일 Contact Us - 아이콘폰트(폰트어썸)  https://cdnjs.com/libraries/font-awesome</title>
+
+  <!-- 폰트어썸 cdn 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <style>
+    /* 초기화 */
+    *{margin:0px;padding:0px;}
+    body{
+      font-family: "맑은 고딕", arial, sans-serif;
+      font-size:12px;
+      color:#333;
+    }
+
+    header{
+      background:#ccc;
+      line-height:60px;
+      text-align:center;
+    }
+
+    main{padding:50px 10px;}
+    fieldset, legend{border:none;}
+    legend{
+      text-align:center;
+      font-weight: bold;
+      padding-bottom:30px;
+      color:rgb(63, 123, 235);
+      font-size:18px;
+    }
+
+    .fa-solid, .fas{
+      color:rgb(63, 123, 235);
+      font-size:16px;
+      padding-right:10px;
+    }
+    main form > fieldset{
+      width:320px;
+      margin:0px auto;
+      border:none;
+    }
+    main form > fieldset p{
+        padding:4px 0px;
+        text-align:center;
+      }
+
+      input[type='text'], input[type='email']{
+          width:85%;
+          height:26px;
+      }
+      .t_box{text-align:left;padding-left:10px;}
+      .t_box i{
+          position:relative;top:-60px;
+      }
+      textarea{width:87%;}
+    input[type='submit']{
+      background-color:rgb(63, 123, 235);
+      color:#fff;
+      padding:4px 16px;
+      border:none;
+    }
+
+    footer{
+      background:#333;
+      line-height:40px;
+      color:#fff;
+      text-align:center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>상단헤더영역</header>
+
+  <main>
+    <form name='문의하기' method="post" action="a.php">
+      <fieldset>
+        <legend>Contact Us</legend>
+        <p>
+            <label for="first"><i class="fas fa-user"></i></label>
+            <input type="text" maxlength="3" placeholder="first name" id='first'>
+        </p>
+          
+        <p>
+            <label for="last"><i class="fas fa-user"></i></label>
+            <input type="text" maxlength="6" placeholder="last name" id="last">
+        </p>
+          
+        <p>
+            <label for="email"><i class="fa-solid fa-envelope"></i></label>       
+            <input type="email" placeholder="id@domain.co.kr or com" id="email">
+        </p>
+          
+        <p>
+            <label for="phone"><i class="fas fa-phone"></i></label>
+            <input type="text" placeholder="phone number" id="phone">
+        </p>
+          
+        <p class="t_box">
+            <label for="t_box"><i class="fas fa-pen"></i></label>
+            <textarea rows="5" id="t_box"></textarea>
+        </p>
+          
+        <p>
+          <input type="submit" value="보내기">
+        </p>
+          
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>푸터영역</footer>
+
+</body>
+</html>

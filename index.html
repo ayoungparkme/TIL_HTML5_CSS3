@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹초급 - html5, css3학습하기</title>
+  <style>
+    *{padding:0px;margin:0px;}
+    body{
+      font-family:"맑은 고딕",arial,sans-serif;
+      font-size:12px;
+      color:#333;
+    }
+    h1{
+      text-align:center;
+      padding:16px 0px;
+      font-size:20px;
+      text-transform:uppercase;
+    }
+    .title01{
+      text-align:center;
+      margin-top:6px;
+      /* 
+      ;line-height:40px;
+      font-size:16px;
+      background:rgb(2, 98, 177);
+      margin:0px 5px 10px 5px;
+      color:#fff;
+      border-radius:20px; */
+    }
+    .title01 > img{width:160px;}
+    .border01{
+      border-top:3px solid #e44d26;
+      border-bottom:3px solid #e44d26;
+    }
+    .border02{
+      border-top:3px solid #1572b6;
+      border-bottom:3px solid #1572b6;
+    }
+    .bgcolor01{background:#f16529;}
+    .bgcolor02{background:#33a9dc;}
+    section{margin-bottom:10px;}
+    dl{
+      margin:0px 5px;
+      overflow:hidden;
+    }
+    dt{
+      font-size:14px;     
+      color:#fff;
+      padding:12px 0px;
+      font-weight:bold;
+      text-indent:10px;
+      border-bottom:1px solid #fff;
+    }
+    dl dt:last-of-type{border:none;}
+    dd{
+      background:rgb(238, 238, 238);
+      border-bottom:1px solid #ccc;
+      /* overflow:hidden; */
+    }
+    dd > a{
+      font-size:13px;
+      line-height:40px;
+      color:#333;
+      text-decoration:none;
+      text-indent:20px;
+      display:block;
+      transition:0.3s;
+    }
+    dd > a:hover{
+      font-weight:bold;
+      background:rgb(255, 255, 159);
+      transform:scale(1.1);
+      box-shadow:0px 0px 3px rgb(172, 172, 172);
+      text-indent:50px;
+    }
+    i.fa-angle-down{
+      color:#fff;
+      font-size:16px;
+      float:right;
+      padding:0px 10px;
+    }
+    footer{
+      line-height:50px;
+      text-align:center;
+      background:#333;
+    }
+    footer > address{
+      font-style:normal;
+      color:#fff;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <section>
+  <h2 class="title01"><img src="./03_0422/img/html5.jpg" alt="html5"></h2>
+  <dl class="border01">
+    <dt class="bgcolor01">1일차 - HTML5소개와 문법 - 제목, 문단, 인용문태그<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./01_0419/html_start.html" title="html문서의 기본구조">1. html문서의 기본구조</a></dd>
+    <dd><a href="./01_0419/html5_start.html" title="html5문서 작성법">2. html5문서 작성법</a></dd>
+    <dd><a href="./01_0419/01heading.html" title="제목태그 요소">3. 제목태그 요소</a></dd>
+    <dd><a href="./01_0419/02paragraph.html" title="문단태그 요소">4. 문단태그 요소</a></dd>
+    <dd><a href="./01_0419/03blockquote.html" title="인용문태그 요소">5. 인용문태그 요소</a></dd>
+    <dd><a href="./01_0419/exec.html" title="실습예제">실습예제_서른의 연애</a></dd>
+
+    <dt class="bgcolor01">2일차 - 웹표준, 웹접근성의 이해, 프리, 글자, 목록관련태그<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./02_0421/04_pre.html" title="프리태그">1. 프리태그</a></dd>
+    <dd><a href="./02_0421/05_font.html" title="글자태그">2. 글자태그</a></dd>
+    <dd><a href="./02_0421/06_list.html" title="목록태그">3. 목록태그</a></dd>
+    <dd><a href="./02_0421/exec2.html" title="실습예제_국립중앙박물관">실습예제_국립중앙박물관 이용안내</a></dd>
+
+    <dt class="bgcolor01">3일차 - 웹이미지의 종류와 특징, 이미지태그, 하이퍼링크<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./03_0422/07_img_tag.html" title="이미지태그">1. 이미지태그</a></dd>
+    <dd><a href="./03_0422/08_svg_tag.html" title="svg태그">2. svg태그</a></dd>
+    <dd><a href="./03_0422/09_link_tag.html" title="하이퍼링크태그">3. 하이퍼링크태그</a></dd>
+
+    <dt class="bgcolor01">4일차 - SVG이미지, 이미지 맵(map), 인라인 프레임<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./04_0426/10_imgmap.html" title="이미지맵">1. 이미지맵</a></dd>
+    <dd><a href="./04_0426/11_iframe.html" title="아이프레임">2. 인라인(아이프레임)태그</a></dd>
+    <dd><a href="./04_0426/exec/index.html" title="하이퍼링크 실습">실습예제_현대자동차</a></dd>
+
+    <dt class="bgcolor01">5일차 - 테이블 태그와 폼태그의 기본<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./05_0428/12_table.html" title="테이블태그">1. 테이블태그</a></dd>
+    <dd><a href="./05_0428/13_form.html" title="폼태그">2. 폼태그</a></dd>
+    <dd><a href="./05_0428/exec/ex01.html" title="실습예제">실습예제</a></dd>
+
+    <dt class="bgcolor01">6일차 - HTML5 추가 폼태그, 속성, 멀티미디어 태그<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./06_0503/14_html5_add.html" title="추가폼태그">1. 추가폼태그</a></dd>
+    <dd><a href="./06_0503/15_multimedia.html" title="멀티미디어태그">2. 멀티미디어태그</a></dd>
+  </dl>
+</section>
+  <br>
+  <section>
+  <h2 class="title01"><img src="./03_0422/img/css3.jpg" alt="css3"></h2>
+
+  <dl class="border02">
+    <dt class="bgcolor02">7일차 - CSS3 소개와 문법, 기본선택자<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./07_0506/01css_start.html" title="css소개">1. css소개와 문법</a></dd>
+    <dd><a href="./07_0506/02css_selector.html" title="선택자">2. 기본선택자(#id, .class, tag) 학습하기</a></dd>
+    <dd><a href="./07_0506/exec.html" title="예제">3. 실습예제-농부로 사는 즐거움</a></dd>
+
+    <dt class="bgcolor02">8일차 - CSS3속성과 콘텐츠 제작<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./08_0510/01css_property.html" title="css속성 익히기">1. css속성의 종류, 글자관련 속성 익히기</a></dd>
+    <dd><a href="./08_0510/exex01.html" title="실습01">2. 실습예제 - 보노보노처럼 살다니 다행이야 01</a></dd>
+    <dd><a href="./08_0510/exec02.html" title="실습02">3. 실습예제 - 보노보노처럼 살다니 다행이야 02</a></dd>
+
+    <dt class="bgcolor02">9일차 - 그룹, 자손, 후손, 링크, 반응 선택자의 이해와 실무활용<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./09_0512/01group_selector.html" title="그룹선택자">1. 그룹선택자</a></dd>
+    <dd><a href="./09_0512/02parent_selector.html" title="자손, 후손선택자">2. 자손, 후손선택자</a></dd>
+    <dd><a href="./09_0512/03link_selector.html" title="링크, 반응선택자">3. 링크, 반응선택자</a></dd>
+    <dd><a href="./09_0512/exec.html" title="실습예제_쿠팡">4. 실습예제_쿠팡 여성패션 콘텐츠</a></dd>
+
+    <dt class="bgcolor02">10일차 - CSS3 속성선택자, 구조선택자의 이해와 실무활용<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./10_0517/01_property_selector.html" title="속성선택자">1. 속성선택자</a></dd>
+    <dd><a href="./10_0517/02_structor_selector.html" title="구조선택자">2. 구조선택자</a></dd>
+    <dd><a href="./10_0517/exec.html" title="실습예제_공지사항">3. 실습예제_공지사항</a></dd>
+
+    <dt class="bgcolor02">11일차 - 디스플레이 속성<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./11_0519/01_display.html" title="디스플레이 속성">1. 디스플레이 속성</a></dd>
+    <dd><a href="./11_0519/exec01.html" title="예제1">2. 예제1</a></dd>
+    <dd><a href="./11_0519/exec02.html" title="예제2">3. 예제2</a></dd>
+    <dd><a href="./11_0519/layout01.html" title="1단 레이아웃">4. 1단 레이아웃</a></dd>
+    <dd><a href="./11_0519/layout02.html" title="2단 레이아웃">5. 2단 레이아웃</a></dd>
+    <dd><a href="./11_0519/layout03.html" title="3단 레이아웃">6. 3단 레이아웃</a></dd>
+
+    <dt class="bgcolor02">12일차 - 요소의 배치방법<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./12_0520/01_position.html" title="요소의 배치방법">1. 요소의 배치 방법</a></dd>
+    <dd><a href="./12_0520/exec01.html" title="예제1">2. 예제1</a></dd>
+    dd><a href="./12_0520/exec02.html" title="예제2">3. 예제2</a></dd>
+
+    <dt class="bgcolor02">13일차 - 웹 네비게이션<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./13_0524/01_web_navigation.html" title="웹 내비게이션">1. 웹 내비게이션</a></dd>
+    <dd><a href="./13_0524/exec01.html" title="예제 1">2. 예제1</a></dd>
+
+    <dt class="bgcolor02">14일차 - 배경<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./14_0526/01background.html" title="백그라운드">1. 백그라운드</a></dd>
+    <dd><a href="./14_0526/02background_image.html" title="백그라운드 이미지">2. 백그라운드 이미지</a></dd>
+    <dd><a href="./14_0526/exec01.html" title="예제 1">3. 예제1</a></dd>
+    <dd><a href="./14_0526/exec02.html" title="예제 1">4. 예제2</a></dd>
+
+    <dt class="bgcolor02">15일차 - 아이콘 폰트<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./15_0531/01_iconfont.html" title="아이콘 폰트">1. 아이콘 폰트</a></dd>
+    <dd><a href="./15_0531/아이콘폰트를 이용한 메뉴구현하기.html" title="아이콘폰트를 이용한 메뉴구현하기">2. 아이콘폰트를 이용한 메뉴구현하기</a></dd>
+    
+    <dt class="bgcolor02">16일차 - 애니매이션 전환<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./16_0602/01_transition.html" title="애니메이션 전환">1. 애니매이션 전환</a></dd>
+    <dd><a href="./16_0602/02_keyframe_animation.html" title="키프레임 애니메이션">2. 키프레임 애니메이션</a></dd>
+    <dd><a href="./15_0602/exec01.html" title="예제 1">3. 예제 1</a></dd>
+    <dd><a href="./15_0602/starbucks.html" title="예제 2">3. 예제 2</a></dd>
+    
+    <dt class="bgcolor02">17일차 - CSS3 서식<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./17_0603/01_css3_border_radius.html" title="모서리 둥글게">1. 모서리 둥글게</a></dd>
+    <dd><a href="./17_0603/02_css3_shadow.html" title="쉐도우(그림자, 박스요소, 텍스트)">2. 쉐도우(그림자, 박스요소, 텍스트</a></dd>
+    <dd><a href="./17_0603/02_css3_transform.html" title="변형">3. 변형</a></dd>
+    <dd><a href="./17_0603/exec.html" title="예제 1">4. 예제 1</a></dd>
+    <dd><a href="./17_0603/exec01.html" title="예제 2">5. 예제 2</a></dd>
+    <dd><a href="./17_0603/exec설명.html" title="예제 3">6. 예제 3</a></dd>
+
+    <dt class="bgcolor02">18일차 ~ 20일차 - 반응형 디자인<i class="fas fa-angle-down"></i></dt>
+    <dd><a href="./20_0614/index.html" title="반응형디자인">1. 반응형디자인</a></dd>
+    
+</section>
+
+<footer>
+  <address>Copyright&copy;2022 design2010 allrights reserved.</address>
+</footer>
+</body>
+</html>

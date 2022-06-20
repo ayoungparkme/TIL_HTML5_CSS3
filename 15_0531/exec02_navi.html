@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>아이콘폰트를 이용한 메뉴구현하기</title>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+    *{margin:0px;padding:0px;}
+    ol, ul, li{list-style:none;}
+    /* 구형브라우저에서 이미지테두리 없애기, 폼그룹 테두리제거 */
+    img, fieldset{border:none;}
+    a{color:#333;text-decoration:none;}
+    body{font-family:"맑은고딕";font-size:12px;color:#333;}
+    
+    h3{
+        margin:50px;text-align:center;
+        font-size:18px;
+    }
+    /* h3요소의 바로다음에 영역을 추가하여 서식적용 */
+    h3:after{
+        display:block;content:"";
+        width:70px;height:1px;
+        background-color:#333;
+        margin:0 auto;
+    }
+    
+    ul{width:700px;margin:0 auto;}/*가운데 정렬*/
+    ul li{
+        float:left;width:100px;height:100px;
+        text-align:center;
+        margin:0px 20px;
+    }
+    ul li a{
+        display:inline-block;/*인라인이면서 블럭요소*/
+        width:60px;line-height:60px;
+        text-align:center;
+        font-size:30px;
+        border-radius:10px;
+        background-color:burlywood;
+    }
+    ul span{color:#fff;}
+    ul p{
+        font-weight:bold;
+        text-align:center;
+    }
+    
+    ul a{
+        position:relative;/*현재위치 기준*/
+        top:-15px;/*위로 올라감*/
+        transition:.8s;/* 전환효과 */
+    }
+    
+    ul a:hover{
+        position:relative;/*본래위치로*/
+        top:0px;
+        background-color:blue;
+    }
+    
+</style>
+</head>
+<body>
+<h2>아이콘폰트를 이용한 메뉴구현하기</h2>
+
+<h3>SERVICE</h3>
+<ul class="lnb">
+    <li>
+        <a href="#" title="">
+        <span class="material-icons">adb</span></a>
+        <p>Logo Design</p>
+    </li>
+        <li>
+        <a href="#" title="">
+        <span class="material-icons">local_florist</span></a>
+        <p>Web Design</p>
+        </li>
+    <li>
+        <a href="#" title="">
+        <span class="material-icons">group</span></a>
+        <p>Social Media</p>
+        </li>
+    <li>
+    <a href="#" title="">
+    <span class="material-icons">airplanemode_active</span></a><p>Content Marketing</p>
+    </li>
+    <li>
+    <a href="#" title=""><span class="material-icons">wallpaper</span></a><p>Image Editing</p>
+    </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+@media screen and (min-width:1025px) { 
+  label.fa-bars{display:none;}
+  i.fa-shopping-cart{display:none;}
+
+header{
+  height:170px;
+  background:#4B4B4B;
+}
+.header_top{
+  width:1200px;
+  margin:0px auto;
+  position:relative;
+}
+.header_top h1{
+  width:200px;
+  position:relative; /* 현재위치에서 이동*/
+  top:40px;
+}
+.header_top h1 img{width:100%;}
+
+.lnb{
+  transform:translateY(-35px);
+}
+.lnb > ul{
+  display:flex;
+  justify-content: flex-end;
+}
+.lnb > ul > li{margin:0px 10px;}
+.lnb > ul > li > a{
+  color:#fff;
+  font-size:13px;
+} 
+/* 검색폼서식 */
+.header_top > fieldset{
+  position:absolute;
+  right:0px;top:80px;
+}
+fieldset > legend{display:none;}
+fieldset > #search{
+  width:230px;height:30px;
+  border-radius:26px;
+  text-align:center;
+  border:none;
+}
+label.fa-search{
+  font-size:22px;
+  transform:translate(-36px, 4px);
+}
+
+/* 헤더bottom영역 서식 */
+.header_bottom{
+  width:100%;
+  height:48px;
+  background-color:rgba(255, 255, 255, 0.95);
+  position:absolute;
+  top:122px;
+  transition:0.5s;
+  overflow:hidden;/*해당하는 높이를 벗어난 콘텐츠 숨기기*/
+}
+.header_bottom:hover{
+  height:420px;
+}
+
+/* 메인메뉴 서식 */
+.gnb{
+  background:#4B4B4B;
+  height:48px;
+}
+.gnb > ul {
+  width:1200px;
+  margin:0px auto;
+  display:flex; /* 자식요소 li를 가로방향 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+}
+.gnb > ul > li{
+  line-height:48px;
+  /* margin-right:10px; */
+  text-align:center;
+  position:relative; /* 서브메뉴의 기준 */
+  padding:0px 40px;
+}
+.gnb > ul > li > a{
+  color:#fff;
+  font-size:16px;
+  font-weight:400;
+  text-transform:uppercase;
+  /* border-right:1px solid #ccc; */
+}
+.gnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+.gnb > ul > li > a::after{
+  width:1px;height:10px;
+  background:#ccc;
+  content:"";
+  display:block;
+  position:relative;top:-28px;
+}
+.gnb > ul > li:first-child > a::after{left:80px;}
+.gnb > ul > li:nth-child(2) > a::after{left:97px;}
+.gnb > ul > li:nth-child(3) > a::after{left:64px;}
+.gnb > ul > li:nth-child(4) > a::after{left:60px;}
+.gnb > ul > li:nth-child(5) > a::after{left:84px;}
+.gnb > ul > li:nth-child(6) > a::after{left:120px;}
+.gnb > ul > li:last-child > a::after{display:none;}
+
+.gnb > ul > li > a:hover{}
+
+/* 서브메뉴서식  */
+.sub{
+  position:absolute;
+  width:100%;
+  left:0px;
+}
+.sub > li{}
+.sub > li > a{
+  font-size:14px;
+}
+.sub > li > a:hover{
+  text-decoration:underline;
+}
+
+/* 메인서식 */
+main{}
+main > section{}
+main > section > h2{display:none;}
+main > section > img{
+  width:100%;
+}
+
+}

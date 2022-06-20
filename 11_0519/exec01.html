@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exec01_퍼스트 클래스 분양홈페이지 레이아웃</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    body{
+      background-image:url('./images/back.png');
+      background-repeat:no-repeat;
+      background-position:center top;
+    }
+    header, main, footer{
+      width:1200px;
+      margin:0px auto;
+    }
+    header{
+      height:150px;background:#ffff00;
+    }
+    header > h1{
+      width:150px;height:50px;
+      background:#ccc;
+      margin:0px auto;
+    }
+    header > nav{
+      margin-top:58px;
+      height:50px;
+      background:#0f0;
+    }
+    main{}
+    main > section{}
+    section > .visual{height:500px;background:rgb(0, 132, 255)}
+    .l_con, .r_con{
+      width:600px;height:300px;
+    }
+    section > .l_con{background:rgb(167, 167, 167);float:left;}
+    section > .r_con{background:rgb(209, 209, 209);float:right;}
+    footer{
+      clear:both; /* 위에서 float속성을 left, right썼기 때문에 both를 사용 */
+      background:#333;
+      color:#fff;
+    }
+    footer > h2{
+      width:150px;height:50px;
+      background:rgb(100, 100, 100);float:left;
+    }
+    footer > address{
+      width:1050px;height:50px;
+      background:rgb(73, 73, 73);float:right;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>상단로고</h1>
+    <nav>상단 내비게이션</nav>
+  </header>
+
+  <main>
+    <section>
+      <article class="visual">메인 슬라이드 영역</article>
+      <article class="l_con">왼쪽 콘텐츠</article>
+      <article class="r_con">오른쪽 콘텐츠</article>
+    </section>
+  </main>
+
+  <footer>
+    <h2>하단로고</h2>
+    <address>회사주소, 대표자명, 카피라이트....</address>
+  </footer>
+</body>
+</html>

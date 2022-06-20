@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하림펫푸드 반응형웹(메인)</title>
+  <!-- 여백초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+
+  <!-- 공통서식 -->
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+
+  <!-- pc화면일때 적용되는 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+  <!-- tablet화면일때 적용되는 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+
+  <!-- mobile화면일때 적용되는 서식 -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+  <!-- 아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!-- 벤더프리픽스 프리 -->
+  <script src="./script/prefixfree.min.js"></script>
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+
+<!-- 상단 헤더영역 시작 -->
+  <header>
+    <div class="header_top">
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo2.png" alt="상단로고">
+        </a>
+      </h1>
+
+      <!-- 오른쪽 상단 메뉴 -->
+      <nav class="lnb">
+        <ul>
+          <li><a href="#" title="로그인">로그인</a></li>
+          <li><a href="#" title="회원가입">회원가입</a></li>
+          <li><a href="#" title="주문조회">주문조회</a></li>
+          <li><a href="#" title="장바구니">장바구니</a></li>
+        </ul>
+      </nav>
+
+      <!-- 검색폼 -->
+      <fieldset>
+        <legend>검색</legend>
+        <input type="search" id="search" placeholder="이달의 초특가 5%" maxlength="50">
+        <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+      </fieldset>
+
+    </div>
+
+    <!-- 장바구니 -->
+    <i class="fas fa-shopping-cart"></i>
+
+    <!-- 전체메뉴 아이콘 -->
+    <label for="toggle" class="fas fa-bars"></label>
+
+  </header>
+
+  <!-- 메인영역 시작 -->
+  <main></main>
+
+  <!-- 푸터영역 시작 -->
+  <footer></footer>
+</body>
+</html>

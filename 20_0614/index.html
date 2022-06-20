@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하림펫푸드 반응형웹(메인)</title>
+  <!-- 여백초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+
+  <!-- 공통서식 -->
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+
+  <!-- pc화면일때 적용되는 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+  <!-- tablet화면일때 적용되는 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+
+  <!-- mobile화면일때 적용되는 서식 -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+  <!-- 아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!-- 벤더프리픽스 프리 -->
+  <script src="./script/prefixfree.min.js"></script>
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+
+<!-- 상단 헤더영역 시작 -->
+  <header>
+    <div class="header_top">
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo2.png" alt="상단로고">
+        </a>
+      </h1>
+
+      <!-- 오른쪽 상단 메뉴 -->
+      <nav class="lnb">
+        <ul>
+          <li><a href="#" title="로그인">로그인</a></li>
+          <li><a href="#" title="회원가입">회원가입</a></li>
+          <li><a href="#" title="주문조회">주문조회</a></li>
+          <li><a href="#" title="장바구니">장바구니</a></li>
+        </ul>
+      </nav>
+
+      <!-- 검색폼 -->
+      <fieldset>
+        <legend>검색</legend>
+        <input type="search" id="search" placeholder="이달의 초특가 5%" maxlength="50">
+        <label for="search" class="fas fa-search"><span>검색버튼</span></label>
+      </fieldset>
+
+    </div>
+
+    <!-- 장바구니 -->
+    <i class="fas fa-shopping-cart"></i>
+
+    <!-- 전체메뉴 아이콘 -->
+    <label for="toggle" class="fas fa-bars"></label>
+
+    <div class="header_bottom">
+      <!-- 닫기 버튼 아이콘 -->
+      <label for="toggle" class="fas fa-times"></label>
+      <nav class="gnb">
+        <ul>
+          <li><a href="#" title="브랜드">브랜드<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="가장 맛있는 시간 30일">가장맛있는시간 30일</a></li>
+              <li><a href="#" title="더리얼">더리얼</a></li>
+              <li><a href="#" title="밥이보약">밥이보약</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="정기배송">정기배송<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="DOG">DOG</a></li>
+              <li><a href="#" title="CAT">CAT</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="DOG">DOG<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="오늘생산배송">오늘생산배송</a></li>
+              <li><a href="#" title="브랜드별">브랜드별</a></li>
+              <li><a href="#" title="연령별">연령별</a></li>
+              <li><a href="#" title="유형별">유형별</a></li>
+              <li><a href="#" title="샘플신청">샘플신청</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+              <li><a href="#" title="상품후기">상품후기</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="CAT">CAT<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="오늘생산배송">오늘생산배송</a></li>
+              <li><a href="#" title="브랜드별">브랜드별</a></li>
+              <li><a href="#" title="연령별">연령별</a></li>
+              <li><a href="#" title="유형별">유형별</a></li>
+              <li><a href="#" title="샘플신청">샘플신청</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+              <li><a href="#" title="상품후기">상품후기</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="매거진">매거진<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="칼로리 계산기">칼로리 계산기</a></li>
+              <li><a href="#" title="Food&amp;Life">Food&amp;Life</a></li>
+              <li><a href="#" title="#하림펫푸드">#하림펫푸드</a></li>
+              <li><a href="#" title="영양성분">영양성분</a></li>
+              <li><a href="#" title="원료사전">원료사전</a></li>
+              <li><a href="#" title="이벤트">이벤트</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="우리 이야기">우리 이야기<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="#" title="우리이야기">우리이야기</a></li>
+              <li><a href="#" title="우리의약속">우리의약속</a></li>
+              <li><a href="#" title="100% 휴먼그레이드">100% 휴먼그레이드</a></li>
+              <li><a href="#" title="이노베이션">이노베이션</a></li>
+              <li><a href="#" title="제조시설">제조시설</a></li>
+              <li><a href="#" title="반려견 동반">반려견 동반</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" title="투어신청">투어신청</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인영역 시작 -->
+  <main>
+    <section id='slide'>
+      <h2>메인슬라이드</h2>
+      <img src="./images/main01.jpg" alt="배너1">
+    </section>
+
+    <!-- 무료체험 -->
+    <div class="free_ex">
+      <article>
+        <h2>하림펫푸드 사료 무료 체험</h2>
+        <img src="./images/sns21.jpg" alt="밀리뷰" id="free_img">
+
+        <div class="free_ex_right">
+          <h2>
+            <img src="./images/gold_icon_7.png" alt="무료"><br>
+            하림펫푸드 <strong>사료 무료체험</strong>
+          </h2>
+          <p>오래오래 우리함께 <br> 소중한 반려견 면역력으로 바꾸세요!</p>
+          <a href="#" title="체험하기" class="button">체험하기</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- 하림펫 쇼핑하러가기 -->
+    <article class="shop">
+      <h2> <img src="./images/order_step_icon_4.png" alt="주문하기"><strong>하림펫 쇼핑</strong>하러가기
+      </h2>
+      <p class="p_center">
+        <a href="#" title="바로가기" class="button">바로가기</a>
+      </p>
+
+      <!-- 상품목록 -->
+      <ul class="product">
+        <li>
+          <img src="./images/product05.jpg" alt="밥이보약">
+          <div class="info">
+            <h3>[100 휴먼그레이드 밥이 보약]</h3>
+            <p>DOG 탄탄한 성장</p>
+            <p>50g &#x00d7;4</p>
+            <span class="price">판매가 : 15,000원</span>
+          </div>
+        </li>
+        <li><img src="./images/product03.jpg" alt="밥이보약">
+          <div class="info">
+            <h3>[100 휴먼그레이드 밥이 보약]</h3>
+            <p>DOG 탄탄한 성장</p>
+            <p>50g &#x00d7;4</p>
+            <span class="price">판매가 : 15,000원</span>
+          </div>
+        </li>
+      </ul>
+
+    </article>
+
+  </main>
+
+  <!-- 푸터영역 시작 -->
+  <footer></footer>
+</body>
+</html>

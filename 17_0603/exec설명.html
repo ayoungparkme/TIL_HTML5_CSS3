@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  *{margin:0px;padding:0px;}
+  input[type=radio]{display:none;}
+  article{
+    border:3px solid #000;
+    width:130px;height:180px;
+  }
+  .travel{
+    display:flex;
+    width:390px;
+    transition:0.5s;
+    position:relative;
+    transition:0.5s;
+  }
+  .photo{
+    width:130px;height:150px;
+    border:1px solid #f00;
+  }
+  #btn01:checked ~ .travel{left:0px;background:#f00;}
+  #btn02:checked ~ .travel{left:-130px;background:#0f0;}
+  #btn03:checked ~ .travel{left:-260px;background:#00f;}
+</style>
+</head>
+<body>
+<article>
+  <input type="radio" id='btn01' name="a">
+  <input type="radio" id='btn02' name="a">
+  <input type="radio" id='btn03' name="a">
+  <div class="travel">
+    <div class="photo">sfsdf1</div>
+    <div class="photo">sfsdf2</div>
+    <div class="photo">sfsdf3</div>
+  </div>
+
+    <label for="btn01">버튼1</label>
+    <label for="btn02">버튼2</label>
+    <label for="btn03">버튼3</label>
+  </article>
+</body>
+</html>

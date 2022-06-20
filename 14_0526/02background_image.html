@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02background_image</title>
+  <style>
+    .box01{
+      width:500px;height:300px;
+      border:3px solid #000;
+      background-image:url('./images/back.jpg');
+      background-repeat:no-repeat; /*배경 반복하지 않기*/
+      /* background-repeat:repeat-x; 배경 세로방향, 가로방향 반복하기 */
+      background-size:100px;   /* px, %를 사용하여 크기를 지정해도 가능 */
+      background-position:300px 100px; /* 배경이미지 위치 조정 */
+    }
+    .box02{
+      border:3px solid #000;
+      height:400px;
+      background-image:url('./images/fav_prod_bg_new.jpg');
+      background-attachment:fixed;
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+    .box03{
+      width:1000px;height:200px;
+      border:3px solid #000;
+      background:url('./images/auction.gif') no-repeat left, url('./images/daum.png') no-repeat right;
+    }
+  </style>
+</head>
+<body>
+  <h2>02background_image(배경이미지)</h2>
+  <div class="box01">
+    배경이미지 속성사용하기
+  </div>
+
+  <h3>배경이미지 고정시키기</h3>
+  <div class="box02"></div>
+
+  <h3>멀티백그라운드 이미지</h3>
+  <div class="box03"></div>
+
+  <h3>네이버 스프라이트 이미지로 네이버 로고 삽입하기</h3>
+
+  <h1>
+    <a href="index.html" title="네이버 바로가기">네이버 로고</a>
+  </h1>  
+
+  <a href="#" ttile="다크모드" class="dark_btn">다크모드</a>
+
+<style>
+    h1{
+      width:450px;height:110px;
+      border:2px solid #000;
+      background-image:url('./images/sp_main_57f073.png');
+      background-position:0px -312px;
+    }
+    h1 > a{
+      /* opacity: 0; */
+      text-indent:-9999px; /*말도 안되는 값을  써서 모니터 화면밖으로 보냄. */
+      display:block;
+      height:110px;
+    }
+    .dark_btn{
+      display:block;
+      width:264px;height:90px;
+      border:2px solid #000;
+      background-image:url('./images/sp_main_57f073.png');
+      background-position:-542px -115px;
+      text-indent:-9999px;
+    }
+    .dark_btn:hover{
+      background-position:-542px -225px;
+    }
+
+  </style>
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

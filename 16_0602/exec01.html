@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>css3 추가속성 - animation</title>
+	<style>
+		div{width:100px;height:100px;}
+		#box01{
+			background-color:#ff0000;
+			animation-name:ani01;   /* 애니메이션 이름지정 */
+			animation-duration: 3s;  /* 애니메이션 시간지정 */
+			animation-iteration-count: infinite;  /*무한반복*/
+		}
+		
+		/* 애니메이션 내용을 만들어 준다. */
+		@keyframes ani01{
+			0%{background-color:#ff0000;} /*시작*/
+			50%{background-color:#00ff00;} /*중간*/
+			100%{background-color:#ff0000;} /* 끝*/
+		}
+		
+		#box02{
+			width:600px;
+			height:1038px;
+			border:3px solid #000;
+			margin:0px auto;
+			overflow:hidden;
+		}
+		#box02 > img{
+			transform:scale(1);
+			animation-name:mintro;
+			animation-duration: 20s;
+			animation-iteration-count: infinite;
+		}
+		
+		@keyframes mintro{
+			0%{transform: scale(1);}
+			50%{transform: scale(1.5);} /* 1.5배 키우기 */
+			100%{transform: scale(1);}
+		}
+	</style>
+</head>
+<body>
+	<h2>css3 추가속성 - animation</h2>
+	<p>animation속성은 transition속성과는 달리 사용자가 마우스로 동작을 하지 않아도 자동으로 움직이게 하는 속성이다.</p>
+	<p>@keyframes '애니메이션 이름' 을 작성하여 움직이는 내용을 만들어 준 후 사용자가 선택한 요소에 animation속성으로 지정해 준다.</p>
+	<div id="box01">
+	 자동으로 색상이 변하는 애니메이션 만들기
+	</div>
+	<h3>모바일 인트로 화면 만들기</h3>
+	<div id="box02">
+	 <img  src="./images/back01.png">	
+	</div>
+	
+	
+	
+	
+</body>
+</html>

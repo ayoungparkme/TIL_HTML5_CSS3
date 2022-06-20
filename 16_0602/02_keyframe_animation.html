@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_keyframe_animation p.413</title>
+  <style>
+    #box01{
+      width:100px;height:100px;
+      background:#f00;
+      animation-name: ani01; /* 적용할 애니메이션 이름*/
+      animation-duration: 5s; /* 적용할 시간 */
+      animation-iteration-count: infinite; /* 애니메이션 반복회수 */
+    }
+
+/*  애니메이션 시나리오 작성하기 */
+    @keyframes ani01{
+      0%{transform: rotate(0deg);} /* 출발지점*/
+      50%{transform:rotate(-180deg);} /* 도는 지점 */
+      100%{transform: rotate(0deg);} /*끝지점*/
+    }
+
+
+  </style>
+</head>
+<body>
+  <h2>02_keyframe_animation p.413</h2>
+  <p>애니메이션 keyframe속성은 @keyframes속성안에서 애니메이션 내용을 작성한 후 사용자가 지정한 요소에 animation이름을 지정하여 자동으로 움직이도록 한다.</p>
+  <pre>
+    작성법)
+    @keyframes 애니메이션 이름{
+      0%{실행할 서식}
+      100%{실행할 서식}
+    }
+  </pre>
+  <ul>
+    <li>animation-name : 적용할 애니메이션 이름</li>
+    <li>animation-duration : 애니메이션 시간설정</li>
+    <li>animation-interation-count : 애니메이션 반복회수</li>
+    <li>animation-delay : 애니메이션 지연 시간설정</li>
+  </ul>
+
+  <h3>1. 회전하는 박스 만들기</h3>
+  <div id="box01">회전하는 박스</div>
+
+  <h3>2. 폰트어썸 아이콘 폰트를 활용한 메뉴 애니메이션</h3>
+  <p>https://cdnjs.com/libraries/font-awesome</p>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <ul class="sns">
+    <li><i class="fab fa-twitter-square"></i></li>
+    <li><i class="fab fa-facebook-square"></i></li>
+    <li><i class="fab fa-youtube-square"></i></li>
+    <li><i class="fab fa-instagram-square"></i></li>
+  </ul>
+
+  <style>
+    .sns{
+      display:flex;
+      width:430px;
+    }
+    .sns > li{
+      list-style:none;
+      border:3px solid #f00;
+      margin:20px;
+      text-align:center;
+      border-radius:50%;
+      padding:14px 17px;
+    }
+    .sns > li:hover{
+      background:#f00;
+    }
+    .sns > li > i{
+      font-size:50px;
+      color:#f00;
+    }
+    .sns > li:hover > i{
+      color:#fff;
+      /* animation-name: ani02;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; */
+      animation:ani02 3s infinite; /* 축약법 */
+    }
+
+    @keyframes ani02{
+      0%{transform:rotate(0deg);}
+      50%{transform:rotate(360deg);}
+      100%{transform:rotate(0deg);}
+    }
+  </style>
+
+</body>
+</html>

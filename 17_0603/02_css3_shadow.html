@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_css3_shadow(그림자, 박스요소, 텍스트)</title>
+
+  <!-- css3속성 사용시 접두사 자동을 붙여주는 스크립트 소스 -->
+  <script src="script/prefixfree.min.js"></script>
+
+  <style>
+    .p01{text-shadow:2px 2px 0px #f00;}
+    .p02{
+      box-shadow:2px 2px 5px #00f;
+      -ms-box-shadow:2px 2px 5px #00f; /* 익스플로러에서 적용 */
+      -webkit-box-shadow:2px 2px 5px #00f; /* 크롬, 사파리에서 적용*/
+      -o-box-shadow:2px 2px 5px #00f; /* 오페라 */
+      -moz-box-shadow:2px 2px 5px #00f; /* 파이어폭스 */
+    }
+
+    #box01 img{
+      border:5px solid #fff;
+      border-bottom:20px solid #fff;
+      box-shadow:0px 0px 6px rgb(85, 85, 85);
+    }
+    #box02 img{
+      border:10px solid #fff;
+      box-shadow:0px 0px 6px rgb(85, 85, 85);
+      border-radius:50%;
+    }
+    #box02:hover img{
+      filter: grayscale(1); /* 흑백으로 */
+    }
+  </style>
+</head>
+<body>
+  <h2>02_css3_shadow(그림자, 박스요소, 텍스트)</h2>
+  <p>shadow(그림자)속성은 글자와 이미지, 블럭요소에 그림자효과를 넣을 때 사용하는 속성이다.</p>
+  <p>작성법) text-shadow or box-shadow : x y offset 색상;</p>
+
+  <p class="p01">텍스트에 그림자효과 주기</p>
+  <p class="p02">박스요소에 그림자효과 주기</p>
+
+  <div id="box01"><img src="./images/10.jpg" alt=""></div>
+  <div id="box02"><img src="./images/11.jpg" alt=""></div>
+  
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@media screen and (max-width:767px) {
+  label.fa-times, i.fa-angle-down{display:block;}
+  .sub{display:none;}
+  header{
+    position:relative;
+    width:100%;height:60px;
+    background-color:#333;
+  }
+  .header_top > h1{
+    width:130px;
+    margin:0px auto;
+    padding-top:5px;
+  }
+  .header_top > h1 img{
+    width:100%; /*자동크기조정*/
+  }
+  .fa-bars, .fa-shopping-cart{
+    position:absolute;top:20px;
+    color:#fff;
+    font-size:1.6rem; /* 12*1.6배*/
+  }
+  .fa-bars{left:20px;}
+  .fa-shopping-cart{right:20px;}
+
+/* 내비게이션 서식 */
+.lnb{
+  width:100%;
+  position:fixed;
+  top:460px;left:-100%;
+  transition:0.5s;
+  z-index:100;
+}
+.lnb > ul{
+  display:flex;
+  flex-wrap:wrap;/* 영역을 벗어나면 다음줄로 넘김 */
+  justify-content: center;
+}
+.lnb > ul > li{
+  width:44%;
+  margin:0px 2px 4px 2px;
+  text-align:center;
+  background:rgb(94,94,94);
+}
+.lnb > ul > li > a{
+  display:block;
+  line-height:40px;
+  color:#fff;
+}
+
+/* gnb서식 */
+.gnb{
+  width:100%;height:100%;
+  position:fixed;
+  background:rgba(0,0,0,.7);
+  top:0px;left:-100%;
+  transition:0.5s;
+  padding:120px 4% 0px 4%;
+  box-sizing: border-box;
+  z-index:10;
+}
+.header_bottom label.fa-times{
+  color:#fff;
+  font-size:2.3rem;
+  padding:20px;
+  position:fixed;
+  left:-100%; /* 90%*/
+  top:0px;
+  z-index:110;
+  transition:0.5s;
+}
+.gnb > ul{}
+.gnb > ul > li{
+  padding:0px 2%;
+  border-bottom:1px solid #ccc;
+}
+.gnb > ul > li > a{
+  color:#fff;
+  font-size:1rem;
+  line-height:40px;
+  display:block;
+}
+.gnb > ul > li > a > i.fa-angle-down{
+  float:right;
+  font-size:1.1rem;
+  padding:12px 5px 5px 5px;
+}
+/* 검색폼서식 */
+.header_top > fieldset{
+  position:fixed;
+  z-index:120;
+  width:100%;
+  left:-100%;
+  transition:0.5s;
+}
+fieldset > legend{display:none;}
+fieldset > #search{
+  width:230px;height:30px;
+  border-radius:26px;
+  text-align:center;
+  border:none;
+}
+label.fa-search{
+  font-size:22px;
+  transform:translate(-36px, 4px);
+}
+
+/* 햄버거 버튼 클릭시 검색폼, 닫기버튼, lnb, gnb 모두 날아오기 */
+
+#toggle:checked + header .header_top > .lnb{left:0%;}
+#toggle:checked + header .header_top > fieldset{left:26%;}
+
+#toggle:checked + header .header_bottom > .gnb{left:0%;}
+#toggle:checked + header .header_bottom > .fa-times{left:87%;}
+
+}

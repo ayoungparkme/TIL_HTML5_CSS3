@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>실습평가_핑크하우스 공지사항 게시판</title>
+    <style>
+/*        여백 초기화 */
+        *{margin: 0px; padding: 0px;}
+        
+        caption, legend{display: none;}
+        
+        h2{
+            text-align: center;
+            padding: 20px 0px; /* 안쪽 여백: 위아래 20, 좌우 0*/
+        }
+        
+        body{
+            font-family: "맑은 고딕", arial, sans-serif;
+            font-size: 12px;
+            color: #333333; /*글자색상: 진회색 사용(검정사용x)*/
+        }
+        
+        table{
+            width: 700px;
+            margin: 0px auto; /*바깥여백: 위아래 0, 좌우 auto(화면의 가운데)*/
+            border-collapse: collapse; /*셀과 셀사이 간격 없앰*/
+        }
+        
+        table > thead > tr > th:first-child{width:50px;}
+        table > thead > tr > th:first-child(2){width:450px;}
+        table > thead > tr > th:first-child(3){width:100px;}
+        table > thead > tr > th:first-child(4){width:50px;}
+        table > thead > tr > th:last-child{width:50px;}
+     
+        table > thead > tr > th{
+            text-transform: uppercase;
+            background-color: #ea98c7;
+            color: #ffffff;
+            border-top: 3px solid #f56fb7;
+            border-bottom: 2px solid #f56fb7;
+            line-height: 30px;
+            }
+        
+        tbody tr:nth-child(2n){
+            background-color: #fff4eb;
+        }
+        
+        tbody tr td:nth-child(3){
+            font-weight: bold;
+        }
+        
+        tbody tr td:nth-child(2){
+            text-align: left;
+        }
+        
+        tbody tr td:nth-child(4){
+            color: #c4b9b9;
+            font-size: 11px;
+        }
+        
+        tbody tr td:nth-child(5){
+            color: #c4b9b9;
+            font-size: 11px;
+        }
+        
+        tbody tr{
+            border-bottom: 1px dashed; /*점선: dotted 또는 dashed*/
+            line-height: 25px;
+            text-align: center;
+        }
+        
+        a{
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        fieldset{
+            border: none;
+            text-align: center;
+            margin: 20px auto;
+        }
+        
+        #s01{width: 100px;} 
+        #i01{width: 120px; height: 17px;}
+        #i02{
+            background-color: #e2529f;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 1px 7px;
+            border: 1px solid #000000;
+            border-radius: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+<h2>실습평가_핑크하우스 공지사항 게시판</h2>
+<table>
+    <caption>공지사항</caption>
+    <thead>
+        <tr>    
+        <th>no.</th> 
+        <th>subject</th>
+        <th>writer</th>
+        <th>date</th> 
+        <th>hit</th>
+        </tr>
+    </thead>
+        
+    <tbody>
+        <tr>
+        <td>7</td>   
+        <td><a href="../html_08/img/photo_01.jpg" alt="7">[필독] 핑크 하우스 회원 혜택</a></td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>3</td>    
+        </tr>
+        
+        <tr>
+        <td>6</td>   
+        <td><a href="../html_08/img/photo_02.gif" alt="6">[안내] 생일 축하 쿠폰 및 적립금 안내</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>2</td>    
+        </tr>
+        <tr>
+        <td>5</td>   
+        <td><a href="../html_08/img/photo_03.png" alt="5">[안내] 핑크 하우스 무료 배송 안내</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>1</td>    
+        </tr>
+        <tr>
+        <td>4</td>   
+        <td><a href="../html_08/img/photo_04.bmp" alt="4">[필독] 배송사 및 처리 확인</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>1</td>    
+        </tr>
+        <tr>
+        <td>3</td>   
+        <td><a href="../html_08/img/photo_01.jpg" alt="3">[필독] 카드 무이자 할부 행사 안내</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>1</td>    
+        </tr>
+        <tr>
+        <td>2</td>   
+        <td><a href="../html_08/img/photo_02.gif" alt="2">[안내] 핑크 하우스 오프라인 매장 안내</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>1</td>    
+        </tr>
+        <tr>
+        <td>1</td>   
+        <td><a href="../html_08/img/photo_03.png" alt="1">[필독] 핑크 하우스 등급제 안내</td>    
+        <td>관리자</td>    
+        <td>05-29</td>    
+        <td>2</td>    
+        </tr>
+      
+        
+    </tbody>
+   
+</table>
+    
+<form name="search" action="받을서버주소" method="post">
+<fieldset>
+    <legend>검색창</legend>
+    
+    <select id="s01">
+    <option value="head">제목</option>
+    <option value="body">내용</option>
+    </select>
+    
+    <input id="i01" type="text" title="검색어 입력">
+    <input id="i02" type="submit" value="검색">
+    <label class="r01"><input type="radio" name="choice" value="and"> and</label>
+    <label class="r01"><input type="radio" name="choice" value="or"> or</label>
+    
+    
+</fieldset>
+</form>
+    
+    
+    
+</body>
+</html>

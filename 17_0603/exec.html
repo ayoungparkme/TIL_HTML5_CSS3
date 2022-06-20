@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제 - 변형속성과 애니메이션 속성을 활용하여 배너구현하기</title>
+  <style>
+    *{margin:0px;padding:0px;}
+    h2{padding:10px;text-align:center;}
+    ul, ol, li{list-style:none;}
+    input[type='radio']{display:none;}
+    article{
+      width:580px;height:400px;
+      /* border:3px solid #000; */
+      margin:0px auto;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      border-top:10px solid #fff;
+      border-right:10px solid #fff;
+      border-bottom:15px solid #fff;
+      border-left:10px solid #fff;
+      box-shadow:0px 0px 10px rgb(177, 177, 177);
+    }
+    article .travel{
+      position:relative;
+      transition:0.5s; /* 시간을 설정하여 부드럽게 움직이게 한다. */
+    }
+    article ul{
+      display:flex; /* 자식요소 li태그를 가로배치 */
+      position:relative; /* 위치값을 설정하여 움직여야 하기 때문에 포지션 설정 */
+      width:2320px; /* 580*4=2320 */
+      height:377px;
+      overflow:hidden;
+    }
+    article img{
+      width:580px;height:377px;
+      transition:0.3s;
+      /* filter:grayscale(1); */
+      filter:brightness(0.85);
+      }
+    article img:hover{
+      transform:scale(1.1);
+      /* filter:grayscale(0); */
+      filter:brightness(1);
+    }
+
+    .btn{
+      width:14px;height:14px;
+      display:inline-block;
+      background:#ccc;
+      border-radius:50%;
+      margin:8px 3px 0px 3px;
+      text-indent:-9999px;
+      cursor:pointer;
+    }
+    #btn01:checked ~ .btn01{background:#ffa500;}
+    #btn02:checked ~ .btn02{background:#ffa500;}
+    #btn03:checked ~ .btn03{background:#ffa500;}
+    #btn04:checked ~ .btn04{background:#ffa500;}
+
+    /* 사용자가 메뉴를 클릭하면 해당 라디오버튼에 체크되면서 ul태그의 이동 위치값을 설정하여 해당 이미지가 나오도록 한다. */
+    #btn01:checked ~ .travel{left:0px;}
+    #btn02:checked ~ .travel{left:-580px;}
+    #btn03:checked ~ .travel{left:-1160px;}
+    #btn04:checked ~ .travel{left:-1740px;}
+  </style>
+</head>
+<body>
+  <h2>실습예제 - 변형속성과 애니메이션 속성을 활용하여 배너구현하기</h2>
+  
+  <article>
+    <input type="radio" id="btn01" name="a" checked>
+    <input type="radio" id="btn02" name="a">
+    <input type="radio" id="btn03" name="a">
+    <input type="radio" id="btn04" name="a">
+
+    <div class="travel">
+      <ul>
+        <li><a href="#" title="여행"><img src="./images/photo01.jpg" alt=""></a></li>
+        <li><a href="#" title="여행"><img src="./images/photo02.jpg" alt=""></a></li>
+        <li><a href="#" title="여행"><img src="./images/photo03.jpg" alt=""></a></li>
+        <li><a href="#" title="여행"><img src="./images/photo04.jpg" alt=""></a></li>
+      </ul>
+    </div>
+    <label for="btn01" class="btn btn01">사진01</label>
+    <label for="btn02" class="btn btn02">사진02</label>
+    <label for="btn03" class="btn btn03">사진03</label>
+    <label for="btn04" class="btn btn04">사진04</label>
+  </article>
+
+  <p style="text-align:center;padding-top:40px;">
+    <img src="./images/slide.jpg" alt="슬라이드 동작원리">
+  </p>
+  
+</body>
+</html>

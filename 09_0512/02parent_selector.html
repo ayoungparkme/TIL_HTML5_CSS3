@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_parent_selector(5. 자손과 후손)</title>
+  <style>
+    /* 1. 자손선택자 */
+    header > p{background-color:#ffff00;}
+    main > p{background-color:#00ff00;}
+    footer > p{background-color:#cccccc;}
+
+    /* 2. 후손선택자 */
+    body .p01{  /* body태그의 아래 클래스명 .p01을 모두 찾아서 서식을 변경한다. */
+      border:2px solid #0000ff;
+      padding:10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>02_parent_selector(5. 자손과 후손)</h2>
+  <p>html태그는 부모요소와 자손요소의 개념으로 작성이 되는데, 부모요소의 바로 아래 자손요소를 선택하고자 할 때 '자손선택자', 부모요소의 아래 자손요소를 모두 선택하고자 할 때는 '후손선택자'를 사용한다.</p>
+  <p>작성법) A선택자 > B선택자,  A선택자  B선택자</p>
+
+  <header>
+    <p class="p01">상단헤더영역 : 로고, 내비게이션, 검색메뉴가 들어가는 영역</p>
+  </header>
+
+  <main>
+    <p class="p01">콘텐츠 영역 : 웹페이지의 콘텐츠 내용이 들어가는 영역으로서 section, article, aside태그가 들어간다.</p>
+  </main>
+
+  <footer class="p01">
+    <p>푸터영역 : 웹페이지의 맨 아래 하단영역으로서 회사정보, 카피라이크, 이용약관, 주소, 전화번호, 패밀리사이트 내용이 들어가는 영역</p>
+  </footer>
+
+</body>
+</html>

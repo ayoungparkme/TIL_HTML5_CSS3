@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니펫 모바일 메인페이지</title>
+  <!-- 여백초기화 -->
+  <link href="./css/reset.css" type="text/css" rel="stylesheet">
+  <style>
+    body{
+      font-family:"맑은 고딕",arial,sans-serif;
+      font-size:12px;
+      color:#333;
+    }
+    a{
+      text-decoration:none;
+      color:#333;
+    }
+    /* 체크박스를 안보이게 숨긴다. */
+    #toggle{display:none;}
+    header{
+      background:#333;
+      height:64px;
+      position:relative; /* 자식요소의 기준 */
+    }
+    header > h1{
+      text-align:center;
+    }
+    header > h1 img{
+      height:50px;padding-top:7px;
+    }
+    .total_mnu, .cart_btn{
+      position:absolute;top:11px;
+    }
+    .total_mnu img, .cart_btn img{
+      width:40px;
+    }
+    .total_mnu{left:10px;}
+    .cart_btn{right:10px;}
+
+    main{}
+    .visual{
+      height:762px;
+      background-image:url('./images/mo_bg_01.jpg');
+      background-repeat:no-repeat;
+      background-position:center;
+      text-align:center;
+    }
+    .visual img{max-width:415px;}
+    footer{
+      background:#333;
+      color:#fff;
+      text-align:center;
+    }
+    footer > address{
+      line-height:50px;font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 헤더영역 시작 -->
+  <header>
+    <h1>
+      <a href="exec01.html" title="메인페이지로 바로가기">
+        <img src="./images/logo_clr.png" alt="상단로고">
+      </a>
+    </h1>
+
+    <label for="toggle" class="total_mnu">
+      <img src="./images/topIcon_burger.png" alt="햄버거버튼">
+    </label>
+
+    <a href="cart.html" title="장바구니" class="cart_btn">
+      <img src="./images/topIcon_cart.png" alt="장바구니">
+    </a>
+  </header>
+
+  <!-- 콘텐츠 영역 시작 -->
+  <main>
+    <article class="visual">
+      <img src="./images/mo_txt_01.png" alt="텍스트">
+    </article>
+  </main>
+
+  <!-- 푸터영역 시작 -->
+  <footer>
+    <address>
+      copyright&copy;2022 지니펫 모바일 allrights reserved.
+    </address>
+  </footer>
+
+</body>
+</html>

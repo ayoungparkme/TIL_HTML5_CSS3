@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html태그 기초 - 12 table(테이블)</title>
+  <style>
+    .border01{
+      width:300px;
+      border-collapse:collapse;
+      border:1px solid #333;
+    }
+    .border01 tr{border:1px solid #333;}
+    .border01 td{border:1px solid #333;}
+    .border01 th{border:1px solid #333;}
+  </style>
+</head>
+<body>
+  <h2>html태그 기초 - 12 table(테이블) p.58</h2>
+  <p>테이블 태그는 표를 만들기 위한 태그로서 table, tr(줄,행), td(칸, 셀), th(셀제목, table header), caption(설명, 제목)태그로 구성되어 있다.</p>
+  <p>달력, 로그인, 회원가입, 약관동의, 문의하기, 게시판에서 많이 사용된다.</p>
+
+  <h3>1. 테이블 태그의 기본작성법</h3>
+  <table class="border01">
+    <caption>표제목</caption>
+    <tr>
+      <th>셀제목</th><th>셀제목</th><th>셀제목</th>
+    </tr>
+    <tr>
+      <td>1줄 1칸</td><td>1줄 2칸</td><td>1줄 3칸</td>
+    </tr>
+    <tr>
+      <td>2줄 1칸</td><td>2줄 2칸</td><td>2줄 3칸</td>
+    </tr>
+  </table>
+<p>caption는 표설명이나 제목을, th는 셀제목을 작성하는데 사용하며 글자가 가운데 정렬되는 특성이 있으며, th는 굵게 속성도 적용된다.</p>
+
+  <h3>2. 셀병합하기 - 가로(colspan), 세로(rowspan)</h3>
+  <table class="border01">
+    <caption>가로 병합(colspan)</caption>
+    <tr>
+      <td colspan="2">1줄 1칸</td>
+    </tr>
+    <tr>
+      <td>2줄 1칸</td><td>2줄 2칸</td>
+    </tr>
+  </table>
+<br>
+  <table class="border01">
+    <caption>세로 병합(rowspan)</caption>
+    <tr>
+      <td rowspan="2">1줄 1칸</td><td>1줄 2칸</td>
+    </tr>
+    <tr>
+      <td>2줄 2칸</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>

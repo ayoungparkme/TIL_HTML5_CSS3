@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>실습예제02_인터파크몰</title>
+	<style>		
+/*		 인터파크 몰 서식 */
+		.mall *{margin:0px;padding:0px;}
+		.mall{
+			width:900px;height:254px;
+			border:3px solid #f00;
+			position:relative;/* 부모요소 기준설정 */
+		}
+		.mall > h2{
+			font-size:18px;
+			border-bottom:1px solid #333333;
+			padding:10px 0px 10px 10px; /* 위 오른 아래 왼쪽 */
+		}
+		.mall > figure{
+			float:left; /* 가로방향으로 배치 */
+			margin:30px 20px 0px 20px; /* 위, 오른, 아래, 왼쪽*/
+		}
+		.mall > figure small{
+			display:block;
+		}
+		.mall a{
+			color:#333333;
+			text-decoration:none;
+		}
+		.mall > figure:first-of-type{margin-left:70px;}
+		
+		/* 왼쪽, 오른쪽 방향버튼 서식 */
+		.mall > img{
+			position:absolute;top:134px;
+		}
+		.mall > img[src*='left']{left:10px;}
+		.mall > img[src*='right']{right:10px;}
+		
+	</style>
+</head>
+<body>
+		<article class="mall">
+		<h2>인터파크 몰</h2>
+		<figure>
+			<a href="#" title=""><img src="./images/0008.jpg" alt=""></a>
+			<figcaption><a href="#" title="">마카오 <small>요즘 여기가 대세</small></a></figcaption>
+		</figure>
+		
+		<figure>
+			<a href="#" title=""><img src="./images/0008.jpg" alt=""></a>
+			<figcaption><a href="#" title="">마카오 <small>요즘 여기가 대세</small></a></figcaption>
+		</figure>
+
+		<figure>
+			<a href="#" title=""><img src="./images/0008.jpg" alt=""></a>
+			<figcaption><a href="#" title="">마카오 <small>요즘 여기가 대세</small></a></figcaption>
+		</figure>
+
+		<figure>
+			<a href="#" title=""><img src="./images/0008.jpg" alt=""></a>
+			<figcaption><a href="#" title="">마카오 <small>요즘 여기가 대세</small></a></figcaption>
+		</figure>
+
+		<figure>
+			<a href="#" title=""><img src="./images/0008.jpg" alt=""></a>
+			<figcaption><a href="#" title="">마카오 <small>요즘 여기가 대세</small></a></figcaption>
+		</figure>
+		
+		<img src="./images/left_btn.png" alt="왼쪽">
+		<img src="./images/right_btn.png" alt="오른쪽">
+	</article>
+
+	<br><br><br>
+	<img src="./images/exec02.jpg" alt="실습완성">
+		
+</body>
+</html>
+
+
+
+
